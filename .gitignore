@@ -39,8 +39,11 @@ share/python-wheels/
 MANIFEST
 
 ### Notebooks ###
+*.ipynb
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
 .vscode/
 env
+
+*/migrations
