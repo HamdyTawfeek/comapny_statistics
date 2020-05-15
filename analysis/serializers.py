@@ -17,11 +17,12 @@ class PerformanceSerializer(ModelSerializer):
     installs = IntegerField(required=False, allow_null=False)
     spend = DecimalField(required=False, max_digits=30, decimal_places=2, allow_null=False)
     revenue = DecimalField(required=False, max_digits=30, decimal_places=2, allow_null=False)
+    cpi = DecimalField(required=False, max_digits=30, decimal_places=2, allow_null=False)
     
 
     class Meta:
         model = Performance
         fields = (
             'id', 'date', 'channel', 'country', 'os', 'impressions',
-            'clicks', 'installs', 'spend', 'revenue',
+            'clicks', 'installs', 'spend', 'revenue', 'cpi',
         )

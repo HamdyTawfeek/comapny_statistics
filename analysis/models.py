@@ -13,3 +13,8 @@ class Performance(models.Model):
     installs =  models.IntegerField('Installs', default=0)
     spend = models.DecimalField('Spend', max_digits=30, decimal_places=3, default=0) 
     revenue = models.DecimalField('Revenue', max_digits=30, decimal_places=3, default=0) 
+
+    @property
+    def cpi(self):
+        return self.spend / self.installs
+
