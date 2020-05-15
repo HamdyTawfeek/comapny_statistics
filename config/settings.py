@@ -25,7 +25,7 @@ SECRET_KEY = '!txpe!lk5*42!x$0+j@)e60p)(y5-(+p1^h1)r+2hwtvj3!&91'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # third party
     'rest_framework',
+    'django_filters',
     # first party
     'analysis.apps.AnalysisConfig',
 ]
