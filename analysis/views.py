@@ -27,7 +27,7 @@ class MetricList(ListAPIView):
         
         group_by = map(str.strip, self.request.query_params['group_by'].split(','))
         queryset = Performance.objects.all()
-        grouped_queryset =  (queryset.values(*group_by)
+        queryset =  (queryset.values(*group_by)
                             .annotate(
                             clicks = Sum('clicks'),
                             impressions = Sum('impressions'),
@@ -35,5 +35,5 @@ class MetricList(ListAPIView):
                             revenue = Sum('revenue'),
                             spend = Sum('spend'))
         )
-        return grouped_queryset
+        return queryset
 
