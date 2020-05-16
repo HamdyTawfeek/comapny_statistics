@@ -61,7 +61,7 @@ To run the project locally,
 
 2. Navigate to Home page [http://localhost:8000/api/v1/metrics/]( http://localhost:8000/api/v1/metrics/) to check the api from the browser.
 
-3. Export `adjust.postman_collection.json` collection to postman to interact with the API.
+3. Import `adjust.postman_collection.json` collection to postman to interact with the API.
 
 
 ## Enhancements I will add soon
