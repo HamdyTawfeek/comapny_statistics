@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "79d040c2-6299-4201-819e-87b35820b7c7",
+		"name": "adjust",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/api/v1/metrics/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/metrics/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"metrics",
+						""
+					]
+				},
+				"description": "list all the performance metrics"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/metrics/?group_by=os,country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/metrics/?group_by=os,country",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"metrics",
+						""
+					],
+					"query": [
+						{
+							"key": "group_by",
+							"value": "os,country"
+						}
+					]
+				},
+				"description": "group by os and country"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/metrics/?group_by=os,country&exclude=cpi",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/metrics/?group_by=os,country&exclude=cpi",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"metrics",
+						""
+					],
+					"query": [
+						{
+							"key": "group_by",
+							"value": "os,country"
+						},
+						{
+							"key": "exclude",
+							"value": "cpi"
+						}
+					]
+				},
+				"description": "group by os and country and exclude cpi"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/metrics/?group_by=channel,country&ordering=-clicks&&date__lt=2017-06-1&exclude=cpi&exclude=revenue&exclude=spend",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/metrics/?group_by=channel,country&ordering=-clicks&&date__lt=2017-06-1&exclude=cpi&exclude=revenue&exclude=spend",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"metrics",
+						""
+					],
+					"query": [
+						{
+							"key": "group_by",
+							"value": "channel,country"
+						},
+						{
+							"key": "ordering",
+							"value": "-clicks"
+						},
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": "date__lt",
+							"value": "2017-06-1"
+						},
+						{
+							"key": "exclude",
+							"value": "cpi"
+						},
+						{
+							"key": "exclude",
+							"value": "revenue"
+						},
+						{
+							"key": "exclude",
+							"value": "spend"
+						}
+					]
+				},
+				"description": "Show the number of impressions and clicks that occurred before the 1st of June 2017, broken down by channel and country, sorted by clicks in descending order"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/metrics/?group_by=date&ordering=date&date__gte=2017-05-1&date__lt=2017-06-1&field=installs&field=date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/metrics/?field=installs&field=date&os=ios&ordering=date&date__gte=2017-05-1&date__lt=2017-06-1&group_by=date",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"metrics",
+						""
+					],
+					"query": [
+						{
+							"key": "field",
+							"value": "installs"
+						},
+						{
+							"key": "field",
+							"value": "date"
+						},
+						{
+							"key": "os",
+							"value": "ios"
+						},
+						{
+							"key": "ordering",
+							"value": "date"
+						},
+						{
+							"key": "date__gte",
+							"value": "2017-05-1"
+						},
+						{
+							"key": "date__lt",
+							"value": "2017-06-1"
+						},
+						{
+							"key": "group_by",
+							"value": "date"
+						}
+					]
+				},
+				"description": "Show the number of installs that occurred in May of 2017 on iOS, broken down by date, sorted by date in ascending order."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/metrics/?field=revenue&date=2017-06-01&group_by=os&ordering=-revenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/metrics/?field=revenue&date=2017-06-01&group_by=os&ordering=-revenue",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"metrics",
+						""
+					],
+					"query": [
+						{
+							"key": "field",
+							"value": "revenue"
+						},
+						{
+							"key": "date",
+							"value": "2017-06-01"
+						},
+						{
+							"key": "group_by",
+							"value": "os"
+						},
+						{
+							"key": "ordering",
+							"value": "-revenue"
+						}
+					]
+				},
+				"description": "Show revenue, earned on June 1, 2017 in US, broken down by operating system and sorted by revenue in descending order."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/v1/metrics/?field=cpi&field=country&country=CA&group_by=channel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/api/v1/metrics/?field=cpi&field=country&country=CA&group_by=channel",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"metrics",
+						""
+					],
+					"query": [
+						{
+							"key": "field",
+							"value": "cpi"
+						},
+						{
+							"key": "field",
+							"value": "country"
+						},
+						{
+							"key": "country",
+							"value": "CA"
+						},
+						{
+							"key": "group_by",
+							"value": "channel"
+						}
+					]
+				},
+				"description": "Show CPI and spend for Canada (CA) broken down by channel."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
