@@ -59,7 +59,7 @@ To run the project locally,
   docker-compose up
   ```
 
-2. Navigate to Home page [http://localhost:8000](http://localhost:8000/api/v1/metrics/)
+2. Navigate to Home page [http://localhost:8000/api/v1/metrics/](http://localhost:8000/api/v1/metrics/)
 
 
 ## Future enhancements
