@@ -62,6 +62,7 @@ To run the project locally,
 2. Navigate to Home page [http://localhost:8000/api/v1/metrics/]( http://localhost:8000/api/v1/metrics/)
 
 
-## Future enhancements
+## Enhancements I will add soon
 
 1. Add test cases for the API
+2. Add sorting by `cpi`
