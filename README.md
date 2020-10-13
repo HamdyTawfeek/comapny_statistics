@@ -1,4 +1,4 @@
-## adjust-task
+## comapny_statistics
 
 -----    
     
@@ -54,8 +54,8 @@ To run the project locally,
 
 1. Open a terminal:
   ```shell
-  git clone https://github.com/HamdyTawfeek/adjust_home_task.git
-  cd adjust_home_task
+  git clone https://github.com/HamdyTawfeek/comapny_statistics.git
+  cd comapny_statistics
   docker-compose up
   ```
 
